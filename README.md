@@ -21,7 +21,7 @@ openssl genrsa -des3 -out rootCA.key 2048
 2. สร้าง root certificate ด้วยคำสั่งดังนี้
 
 ```bash
-openssl req -x509 -new -nodes -key myCA.key -sha256 -days 365 -out rootCA.crt
+openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 365 -out rootCA.crt
 ```
 
 เมื่อรันคำสั่งแล้วจะมี prompt ขึ้นมาให้ใส่รหัสผ่านของ private key หลังจากนั้นให้ระบุข้อมูลต่างของ certificate เช่น Country Name, Oraganization Name, Common Name (Server FQDN) และอื่นๆ เป็นต้น
